@@ -11,7 +11,7 @@ const cors = require('cors')
 
 app.use(cors())
 app.use(bodyParser.json())
-
+app.use(express.static('build'))
 
 app.post('/feedback', (req, res)=> {
     mongoose.connect(database, {useNewUrlParser:true},{ useUnifiedTopology: true })
